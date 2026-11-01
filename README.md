@@ -159,3 +159,14 @@ Muhammad Hamaet Uddin
 
 - GitHub: https://github.com/HeymatUddin
 - LinkedIn: https://www.linkedin.com/in/muhammad-hamaet-uddin/
+
+## Screenshots
+
+### Homepage
+![Amanah homepage](docs/screenshots/home.png)
+
+### Login
+![Amanah login page](docs/screenshots/login.png)
+
+### Dashboard
+![Amanah dashboard](docs/screenshots/dashboard.png)
