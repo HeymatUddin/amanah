@@ -1,0 +1,352 @@
+.dashboard-sidebar,
+.dashboard-sidebar * {
+  box-sizing: border-box;
+}
+
+.dashboard-sidebar {
+  position: sticky;
+  top: 1rem;
+  align-self: start;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  min-width: 0;
+  padding: 1.25rem 1rem;
+  border: 1px solid #dfe8e2;
+  border-radius: 1rem;
+  background: #ffffff;
+}
+
+.dashboard-sidebar__heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding-inline: 0.75rem;
+}
+
+.dashboard-sidebar__heading > p {
+  margin: 0;
+  color: #7d704f;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.dashboard-sidebar nav {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.dashboard-sidebar__item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  min-height: 2.875rem;
+  padding: 0.75rem;
+  border: 1px solid transparent;
+  border-radius: 0.75rem;
+  background: transparent;
+  color: #52665c;
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+}
+
+.dashboard-sidebar__item svg {
+  flex-shrink: 0;
+}
+
+.dashboard-sidebar__item:hover {
+  background: #f0f6f2;
+  color: #065f46;
+}
+
+.dashboard-sidebar__item[aria-current='page'] {
+  border-color: #d2e5d9;
+  background: #eaf5ee;
+  color: #065f46;
+  font-weight: 700;
+}
+
+.dashboard-sidebar__note {
+  margin-top: 1rem;
+  padding: 1rem 0.75rem 0.25rem;
+  border-top: 1px solid #e8eee9;
+}
+
+.dashboard-sidebar__note > span {
+  color: #173d30;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.dashboard-sidebar__note p {
+  margin: 0.4rem 0 0;
+  color: #6b7870;
+  font-size: 0.7rem;
+  line-height: 1.8;
+}
+
+.dashboard-sidebar__close,
+.amanah-dashboard__menu {
+  display: none;
+}
+
+.dashboard-sidebar button:focus-visible,
+.amanah-dashboard__menu:focus-visible {
+  outline: 3px solid #b28b40;
+  outline-offset: 2px;
+}
+
+.amanah-dashboard__body {
+  display: grid;
+  grid-template-columns: 15rem minmax(0, 1fr);
+  align-items: start;
+  gap: 1.5rem;
+  max-width: 90rem;
+  margin-inline: auto;
+  padding: 1.5rem clamp(1rem, 3vw, 2rem);
+}
+
+.amanah-dashboard__body .amanah-dashboard__content {
+  width: 100%;
+  min-width: 0;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+.amanah-dashboard__page-heading {
+  margin-bottom: 1.5rem;
+}
+
+.amanah-dashboard__page-heading h1 {
+  margin: 0;
+  color: #173d30;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+}
+
+.amanah-dashboard__page-heading p {
+  margin: 0.65rem 0 0;
+  color: #626970;
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+.amanah-dashboard__placeholder {
+  padding: 1.5rem;
+  border: 1px solid #dfe8e2;
+  border-radius: 1rem;
+  background: #ffffff;
+  color: #626970;
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+@media (max-width: 800px) {
+  .amanah-dashboard__body {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+  }
+
+  .amanah-dashboard__menu,
+  .dashboard-sidebar__close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 2.75rem;
+    padding: 0.6rem 0.875rem;
+    border: 1px solid #dce5df;
+    border-radius: 0.625rem;
+    background: #ffffff;
+    color: #065f46;
+    font: inherit;
+    font-size: 0.85rem;
+    cursor: pointer;
+  }
+
+  .amanah-dashboard__menu {
+    justify-self: start;
+  }
+
+  .dashboard-sidebar__close {
+    width: 2.75rem;
+    padding: 0;
+  }
+
+  .dashboard-sidebar {
+    position: static;
+    display: none;
+  }
+
+  .dashboard-sidebar--open {
+    display: flex;
+  }
+}
+.amanah-dashboard {
+  --dashboard-navbar-height: 5rem;
+}
+
+.amanah-dashboard__body {
+  min-height: calc(100dvh - var(--dashboard-navbar-height));
+  max-width: none;
+  padding: 0;
+  gap: 0;
+  background: #f6f8f6;
+}
+
+.dashboard-sidebar {
+  top: var(--dashboard-navbar-height);
+  min-height: calc(100dvh - var(--dashboard-navbar-height));
+  border: 0;
+  border-right: 1px solid #d5e4db;
+  border-radius: 0;
+  background: linear-gradient(
+    180deg,
+    #eaf3ed 0%,
+    #f0f6f2 100%
+  );
+}
+
+.dashboard-sidebar__note {
+  margin-top: auto;
+}
+
+.amanah-dashboard__body .amanah-dashboard__content {
+  padding: clamp(1.25rem, 3vw, 2rem);
+}
+
+@media (max-width: 800px) {
+  .amanah-dashboard__body {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .dashboard-sidebar {
+    min-height: auto;
+    border: 1px solid #d5e4db;
+    border-radius: 1rem;
+  }
+
+  .dashboard-sidebar__note {
+    margin-top: 1rem;
+  }
+
+  .amanah-dashboard__body .amanah-dashboard__content {
+    padding: 0;
+  }
+}
+.amanah-dashboard__body {
+  width: 100%;
+  max-width: 1280px;
+  margin-inline: auto;
+}
+
+@media (min-width: 801px) {
+  .dashboard-sidebar {
+    border-left: 1px solid #d5e4db;
+  }
+}
+.amanah-dashboard {
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.amanah-dashboard > .dashboard-navbar {
+  position: relative;
+  top: auto;
+  flex-shrink: 0;
+}
+
+.amanah-dashboard__body {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  align-items: stretch;
+}
+
+.dashboard-sidebar {
+  position: static;
+  align-self: stretch;
+  min-height: 0;
+  overflow-y: auto;
+}
+
+.amanah-dashboard__body .amanah-dashboard__content {
+  min-height: 0;
+  overflow-y: auto;
+}
+
+@media (max-width: 800px) {
+  .amanah-dashboard__body {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+  }
+
+  .amanah-dashboard__menu,
+  .dashboard-sidebar {
+    flex-shrink: 0;
+  }
+
+  .amanah-dashboard__body .amanah-dashboard__content {
+    overflow: visible;
+  }
+}
+.dashboard-sidebar {
+  border-color: #185e49;
+  background: linear-gradient(
+    180deg,
+    #064e3b 0%,
+    #043e30 100%
+  );
+}
+
+.dashboard-sidebar__heading > p {
+  color: #e8cc89;
+}
+
+.dashboard-sidebar__item {
+  color: #d4e5dc;
+}
+
+.dashboard-sidebar__item:hover {
+  background: rgb(255 255 255 / 8%);
+  color: #ffffff;
+}
+
+.dashboard-sidebar__item[aria-current='page'] {
+  border-color: rgb(232 204 137 / 30%);
+  background: rgb(232 204 137 / 12%);
+  color: #f1d99f;
+  box-shadow: inset 3px 0 0 #d5b66d;
+}
+
+.dashboard-sidebar__note {
+  border-top-color: rgb(255 255 255 / 14%);
+}
+
+.dashboard-sidebar__note > span {
+  color: #ecd49a;
+}
+
+.dashboard-sidebar__note p {
+  color: #c0d6ca;
+}
+
+.dashboard-sidebar__close {
+  border-color: rgb(255 255 255 / 20%);
+  background: rgb(255 255 255 / 7%);
+  color: #ffffff;
+}

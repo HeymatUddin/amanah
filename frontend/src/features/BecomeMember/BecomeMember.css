@@ -1,0 +1,400 @@
+.amanah-join,
+.amanah-join * {
+  box-sizing: border-box;
+}
+
+.amanah-join {
+  display: grid;
+  gap: clamp(2rem, 4vw, 3rem);
+  min-width: 0;
+}
+
+.amanah-join__hero {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(2.75rem, 6vw, 4.5rem)
+    clamp(1.5rem, 5vw, 4rem);
+  border: 1px solid #286650;
+  border-radius: 1.5rem;
+  background:
+    radial-gradient(
+      ellipse at 85% 15%,
+      rgb(218 190 113 / 12%),
+      transparent 55%
+    ),
+    linear-gradient(120deg, #043e30, #07513e 60%, #155b46);
+  text-align: center;
+}
+
+.amanah-join__eyebrow {
+  margin: 0;
+  color: #e8cc89;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  line-height: 1.8;
+  text-transform: uppercase;
+}
+
+.amanah-join__hero h1 {
+  margin: 1.25rem 0 0;
+  color: #ffffff;
+  font-size: clamp(2rem, 4.5vw, 3.5rem);
+  font-weight: 700;
+  letter-spacing: -0.045em;
+  line-height: 1.15;
+  text-wrap: balance;
+}
+
+.amanah-join__hero h1 span {
+  display: block;
+  margin-top: 0.3rem;
+  color: #ecd49a;
+}
+
+.amanah-join__hero > p:last-child {
+  max-width: 32rem;
+  margin: 1.5rem auto 0;
+  color: #cee0d7;
+  font-size: 0.95rem;
+  line-height: 1.85;
+  text-wrap: balance;
+}
+
+.amanah-join__layout {
+  display: grid;
+  align-items: start;
+  gap: 2rem;
+}
+
+.amanah-join__sidebar {
+  display: grid;
+  gap: 1.25rem;
+  min-width: 0;
+}
+
+.amanah-join__label {
+  margin: 0;
+  color: #856423;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  line-height: 1.8;
+  text-transform: uppercase;
+}
+
+.amanah-join__intro h2,
+.amanah-join__form-card > h2 {
+  margin: 0.65rem 0 0;
+  color: #173d30;
+  font-size: clamp(1.65rem, 3vw, 2.1rem);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1.25;
+}
+
+.amanah-join__intro > p:last-child,
+.amanah-join__form-description {
+  margin: 1rem 0 0;
+  color: #626970;
+  font-size: 0.9rem;
+  line-height: 1.85;
+}
+
+.amanah-join__fact {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.875rem;
+  padding: 1.25rem;
+  border: 1px solid #e0e8e2;
+  border-radius: 1rem;
+  background: #ffffff;
+}
+
+.amanah-join__fact > svg {
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+  color: #08745b;
+}
+
+.amanah-join__fact h3 {
+  margin: 0;
+  color: #173d30;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.amanah-join__fact p {
+  margin: 0.5rem 0 0;
+  color: #626970;
+  font-size: 0.85rem;
+  line-height: 1.8;
+}
+
+.amanah-join__estimate {
+  padding: 1.5rem;
+  border: 1px solid #e4d8bd;
+  border-radius: 1rem;
+  background: #fffaf0;
+}
+
+.amanah-join__estimate h3 {
+  margin: 0.75rem 0 0;
+  color: #173d30;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.amanah-join__estimate dl {
+  display: grid;
+  gap: 1rem;
+  margin: 1.5rem 0 0;
+}
+
+.amanah-join__estimate dl > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+}
+
+.amanah-join__estimate dt {
+  color: #626970;
+  font-size: 0.85rem;
+}
+
+.amanah-join__estimate dd {
+  margin: 0;
+  color: #173d30;
+  font-size: 0.9rem;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.amanah-join__annual {
+  padding-top: 1rem;
+  border-top: 1px solid #e4d8bd;
+}
+
+.amanah-join__annual dd {
+  color: #065f46;
+  font-size: 1.15rem;
+}
+
+.amanah-join__estimate-note {
+  margin: 1.25rem 0 0;
+  color: #626970;
+  font-size: 0.78rem;
+  line-height: 1.8;
+}
+
+.amanah-join__form-card {
+  min-width: 0;
+  padding: clamp(1.25rem, 4vw, 2.5rem);
+  border: 1px solid #dce5de;
+  border-radius: 1.25rem;
+  background: #ffffff;
+}
+
+.amanah-join__form {
+  display: grid;
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.amanah-join__row {
+  display: grid;
+  align-items: start;
+  gap: 1.25rem;
+}
+
+.amanah-join__field {
+  display: grid;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+.amanah-join__field label {
+  color: #173d30;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.amanah-join__field input,
+.amanah-join__field textarea {
+  width: 100%;
+  min-width: 0;
+  padding: 0.875rem 1rem;
+  border: 1px solid #d8e2db;
+  border-radius: 0.625rem;
+  background: #fcfdfc;
+  color: #173d30;
+  font: inherit;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.amanah-join__field input {
+  min-height: 3rem;
+}
+
+.amanah-join__field textarea {
+  resize: vertical;
+}
+
+.amanah-join__field input::placeholder,
+.amanah-join__field textarea::placeholder {
+  color: #7b8480;
+}
+
+.amanah-join__field input:focus,
+.amanah-join__field textarea:focus {
+  border-color: #08745b;
+  outline: 2px solid rgb(8 116 91 / 15%);
+  outline-offset: 1px;
+  background: #ffffff;
+}
+
+.amanah-join__field small {
+  color: #626970;
+  font-size: 0.75rem;
+  line-height: 1.6;
+}
+
+.amanah-join__checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  color: #52665c;
+  font-size: 0.85rem;
+  line-height: 1.8;
+  cursor: pointer;
+}
+
+.amanah-join__checkbox input {
+  flex-shrink: 0;
+  width: 1.1rem;
+  height: 1.1rem;
+  margin-top: 0.2rem;
+  accent-color: #065f46;
+}
+
+.amanah-join__checkbox a {
+  color: #065f46;
+  font-weight: 600;
+  text-underline-offset: 3px;
+}
+
+.amanah-join__notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.625rem;
+  padding: 0.875rem;
+  border-radius: 0.625rem;
+  background: #eff6f1;
+}
+
+.amanah-join__notice svg {
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+  color: #08745b;
+}
+
+.amanah-join__notice p {
+  margin: 0;
+  color: #52665c;
+  font-size: 0.8rem;
+  line-height: 1.75;
+}
+
+.amanah-join__submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  width: fit-content;
+  max-width: 100%;
+  min-height: 3rem;
+  padding: 0.875rem 1.5rem;
+  border: 1px solid #065f46;
+  border-radius: 0.625rem;
+  background: #065f46;
+  color: #ffffff;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.amanah-join__submit:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.amanah-join__availability {
+  margin: -0.5rem 0 0;
+  color: #626970;
+  font-size: 0.8rem;
+  line-height: 1.75;
+}
+
+.amanah-join a:focus-visible,
+.amanah-join__checkbox input:focus-visible {
+  outline: 3px solid #b28b40;
+  outline-offset: 4px;
+}
+
+@media (min-width: 640px) {
+  .amanah-join__row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 900px) {
+  .amanah-join__layout {
+    grid-template-columns:
+      minmax(0, 0.85fr)
+      minmax(0, 1.5fr);
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .amanah-join__submit {
+    width: 100%;
+  }
+}
+.amanah-join__section-title {
+  margin: 0;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #e0e8e2;
+  color: #173d30;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.amanah-join__section-title:not(:first-child) {
+  margin-top: 0.75rem;
+}
+
+.amanah-join__field select {
+  width: 100%;
+  min-width: 0;
+  min-height: 3rem;
+  padding: 0.875rem 1rem;
+  border: 1px solid #d8e2db;
+  border-radius: 0.625rem;
+  background: #fcfdfc;
+  color: #173d30;
+  font: inherit;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.amanah-join__field select:focus {
+  border-color: #08745b;
+  outline: 2px solid rgb(8 116 91 / 15%);
+  outline-offset: 1px;
+  background: #ffffff;
+}

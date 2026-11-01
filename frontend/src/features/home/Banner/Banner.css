@@ -1,0 +1,358 @@
+.amanah-hero {
+  display: grid;
+  align-items: center;
+  gap: 2.5rem;
+  padding: clamp(1.25rem, 3vw, 3rem);
+  border: 1px solid #eee9de;
+  border-radius: 1.25rem;
+  background: #fffefa;
+}
+
+.amanah-hero__content {
+  position: relative;
+  min-width: 0;
+  padding-left: clamp(1.25rem, 2.5vw, 2rem);
+}
+
+.amanah-hero__content::before {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 5px;
+  border-radius: 999px;
+  background: linear-gradient(
+    to bottom,
+    #065f46 0%,
+    #0d9488 45%,
+    #d4a640 100%
+  );
+  content: '';
+}
+
+.amanah-hero__eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0;
+  color: #94712e;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  line-height: 1.6;
+  text-transform: uppercase;
+}
+
+.amanah-hero__eyebrow::after {
+  width: 3rem;
+  height: 1px;
+  flex-shrink: 0;
+  background: #b28b40;
+  content: '';
+}
+
+.amanah-hero__title {
+  margin: 1.5rem 0 0;
+  color: #14231f;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 1.12;
+}
+
+.amanah-hero__title span {
+  display: block;
+  margin-top: 0.35rem;
+  color: #08745b;
+}
+
+.amanah-hero__description {
+  max-width: 34rem;
+  margin: 1.5rem 0 0;
+  color: #626970;
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+.amanah-hero__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+  margin-top: 2rem;
+}
+
+.amanah-hero__button {
+  width: 100%;
+  height: auto;
+  min-height: 3rem;
+  padding: 0.875rem 1.25rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.4;
+  text-align: center;
+  white-space: normal;
+  box-shadow: none;
+}
+
+.amanah-hero__button--primary {
+  border: 1px solid #065f46;
+  background: #065f46;
+  color: #ffffff;
+}
+
+.amanah-hero__button--primary:hover {
+  border-color: #064e3b;
+  background: #064e3b;
+}
+
+.amanah-hero__button--secondary {
+  border: 1px solid #065f46;
+  background: transparent;
+  color: #065f46;
+}
+
+.amanah-hero__button--secondary:hover {
+  background: #ecfdf5;
+}
+
+.amanah-hero__button:focus-visible {
+  outline: 3px solid #b28b40;
+  outline-offset: 4px;
+}
+
+.amanah-approach {
+  min-width: 0;
+  padding: clamp(1.25rem, 3vw, 2.5rem);
+  border: 1px solid #e4d8bd;
+  border-radius: 0.75rem;
+  background: #ffffff;
+}
+
+.amanah-approach__heading {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0;
+  color: #94712e;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  line-height: 1.6;
+  text-transform: uppercase;
+}
+
+.amanah-approach__heading::after {
+  height: 1px;
+  flex: 1;
+  background: #d8c69e;
+  content: '';
+}
+
+.amanah-approach__steps {
+  display: grid;
+  gap: 2rem;
+  margin: 2rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.amanah-approach__step {
+  position: relative;
+  display: grid;
+  grid-template-columns: 2.25rem minmax(0, 1fr);
+  align-items: start;
+  column-gap: 0.875rem;
+}
+
+.amanah-approach__step:not(:last-child)::after {
+  position: absolute;
+  top: 2.75rem;
+  bottom: -1.5rem;
+  left: calc(1.125rem - 0.5px);
+  width: 1px;
+  background: #e4d8bd;
+  content: '';
+}
+
+.amanah-approach__number {
+  display: grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: 1px solid #08745b;
+  border-radius: 50%;
+  color: #065f46;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.amanah-approach__icon {
+  display: none;
+  color: #a78238;
+}
+
+.amanah-approach__details {
+  min-width: 0;
+}
+
+.amanah-approach__details h3 {
+  margin: 0;
+  color: #172b26;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.amanah-approach__details p {
+  margin: 0.5rem 0 0;
+  color: #626970;
+  font-size: 0.9rem;
+  line-height: 1.75;
+}
+
+@media (min-width: 640px) {
+  .amanah-hero__actions {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .amanah-hero__button {
+    width: auto;
+  }
+
+  .amanah-approach__step {
+    grid-template-columns: 2.5rem 2.25rem minmax(0, 1fr);
+    column-gap: 1.25rem;
+  }
+
+  .amanah-approach__number {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .amanah-approach__icon {
+    display: block;
+    margin-top: 0.125rem;
+  }
+
+  .amanah-approach__step:not(:last-child)::after {
+    top: 3rem;
+    left: calc(1.25rem - 0.5px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .amanah-hero {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+    gap: 2.5rem;
+    min-height: 35rem;
+    padding-block: 3.5rem;
+  }
+
+  .amanah-approach__steps {
+    gap: 2.5rem;
+  }
+
+  .amanah-approach__step:not(:last-child)::after {
+    bottom: -2rem;
+  }
+}
+
+.amanah-hero {
+  border-color: #185e49;
+  background: #064e3b;
+}
+
+.amanah-hero__eyebrow {
+  color: #f4d477;
+  text-shadow: 0 0 10px rgb(244 212 119 / 25%);
+}
+
+.amanah-hero__eyebrow::after {
+  background: #d4a640;
+}
+
+.amanah-hero__title {
+  color: #ffffff;
+}
+
+.amanah-hero__title span {
+  color: #f4d477;
+  text-shadow: 0 0 16px rgb(244 212 119 / 15%);
+}
+
+.amanah-hero__description {
+  color: #c7dfd5;
+}
+
+.amanah-hero__content::before {
+  background: linear-gradient(
+    to bottom,
+    #6ee7b7,
+    #2dd4bf 45%,
+    #f4d477
+  );
+}
+
+.amanah-hero__button--primary {
+  border-color: #f4d477;
+  background: #f4d477;
+  color: #173d30;
+}
+
+.amanah-hero__button--primary:hover {
+  border-color: #ffe39a;
+  background: #ffe39a;
+}
+
+.amanah-hero__button--secondary {
+  border-color: #c7dfd5;
+  background: transparent;
+  color: #ffffff;
+}
+
+.amanah-hero__button--secondary:hover {
+  border-color: #ffffff;
+  background: #ffffff12;
+  color: #ffffff;
+}
+
+.amanah-hero__button:focus-visible {
+  outline-color: #f4d477;
+}
+
+.amanah-approach {
+  border-color: #ffffff26;
+  background: #0a604b;
+}
+
+.amanah-approach__heading {
+  color: #f4d477;
+  text-shadow: 0 0 10px rgb(244 212 119 / 25%);
+}
+
+.amanah-approach__heading::after {
+  background: #e3c77960;
+}
+
+.amanah-approach__number {
+  border-color: #e3c77980;
+  background: #ffffff08;
+  color: #f4d477;
+}
+
+.amanah-approach__icon {
+  color: #f4d477;
+  filter: drop-shadow(0 0 5px rgb(244 212 119 / 20%));
+}
+
+.amanah-approach__details h3 {
+  color: #ffffff;
+}
+
+.amanah-approach__details p {
+  color: #c7dfd5;
+}
+
+.amanah-approach__step:not(:last-child)::after {
+  background: #e3c77945;
+}

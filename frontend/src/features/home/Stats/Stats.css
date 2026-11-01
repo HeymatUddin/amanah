@@ -1,0 +1,109 @@
+.amanah-stats {
+  padding: clamp(2rem, 5vw, 4rem) clamp(1.25rem, 3vw, 2.5rem);
+  border: 1px solid #185e49;
+  border-radius: 1.25rem;
+  background: #064e3b;
+  color: #ffffff;
+}
+
+.amanah-stats__intro {
+  max-width: 38rem;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.amanah-stats__eyebrow {
+  margin: 0;
+  color: #e3c779;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  line-height: 1.6;
+  text-transform: uppercase;
+}
+
+.amanah-stats__title {
+  margin: 0.875rem 0 0;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 750;
+  letter-spacing: -0.035em;
+  line-height: 1.2;
+}
+
+.amanah-stats__subtitle {
+  margin: 1rem 0 0;
+  color: #c7dfd5;
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.amanah-stats__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1rem;
+  margin: 2.5rem 0 0;
+}
+
+.amanah-stats__item {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  padding: 1.5rem 1rem;
+  border: 1px solid #ffffff26;
+  border-radius: 0.875rem;
+  background: #ffffff08;
+  text-align: center;
+}
+
+.amanah-stats__label {
+  color: #e3c779;
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.amanah-stats__value {
+  margin: 0.75rem 0 0;
+  font-size: clamp(2.25rem, 4vw, 3.25rem);
+  font-weight: 750;
+  letter-spacing: -0.04em;
+  line-height: 1.15;
+  font-variant-numeric: tabular-nums;
+}
+
+.amanah-stats__description {
+  max-width: 15rem;
+  margin: 0.875rem auto 0;
+  color: #c7dfd5;
+  font-size: 0.8rem;
+  line-height: 1.7;
+}
+
+.amanah-stats__note {
+  max-width: 42rem;
+  margin: 1.5rem auto 0;
+  color: #c7dfd5;
+  font-size: 0.75rem;
+  line-height: 1.8;
+  text-align: center;
+}
+
+@media (min-width: 640px) {
+  .amanah-stats__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .amanah-stats__grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.amanah-stats__eyebrow,
+.amanah-stats__label {
+  color: #f4d477;
+  text-shadow:
+    0 0 6px rgb(244 212 119 / 30%),
+    0 0 16px rgb(218 165 32 / 18%);
+}

@@ -1,0 +1,79 @@
+.amanah-pending {
+  display: grid;
+  place-items: center;
+  min-height: 100dvh;
+  padding: 1.5rem;
+  background:
+    radial-gradient(
+      circle at 15% 15%,
+      rgb(6 95 70 / 7%),
+      transparent 45%
+    ),
+    #f6f8f6;
+}
+
+.amanah-pending__card {
+  width: 100%;
+  max-width: 32rem;
+  border: 1px solid #d8e5dc;
+  border-top: 4px solid #b89a52;
+  border-radius: 1.5rem;
+  box-shadow: 0 20px 60px rgb(6 78 59 / 8%);
+}
+
+.amanah-pending__card .amanah-login__card {
+  padding: clamp(1.75rem, 5vw, 3rem);
+  text-align: center;
+}
+
+.amanah-pending__card .amanah-login__icon {
+  width: 4rem;
+  height: 4rem;
+  margin-inline: auto;
+  border-color: #e7d9b4;
+  border-radius: 50%;
+  background: #fff8e8;
+  color: #94712e;
+}
+
+.amanah-pending__card .amanah-login__icon svg {
+  width: 29px;
+  height: 29px;
+}
+
+.amanah-pending__card .amanah-login__card h2 {
+  margin-top: 1.5rem;
+  font-size: clamp(1.6rem, 4vw, 2rem);
+}
+
+.amanah-pending__card .amanah-login__subtitle {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.9;
+}
+
+.amanah-pending__card .amanah-login__form {
+  gap: 0.75rem;
+  margin-top: 1.75rem;
+}
+
+.amanah-pending__card .amanah-login__submit {
+  min-height: 3rem;
+}
+
+.amanah-pending__card button.amanah-login__submit:last-child {
+  border-color: #dce5df;
+  background: #ffffff;
+  color: #52665c;
+}
+
+.amanah-pending__card button.amanah-login__submit:last-child:hover:not(:disabled) {
+  background: #f0f6f2;
+  box-shadow: none;
+}
+
+@media (min-width: 900px) {
+  .amanah-pending__card {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

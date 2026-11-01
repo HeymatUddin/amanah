@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+
+# Environment secrets
+.env
+.env.*
+!.env.example
+
+# Firebase private credentials
+firebase-service-account.json
+*service-account*.json
+*firebase-adminsdk*.json
+
+# Build output
+dist/
+build/
+coverage/
+
+# Logs
+*.log
+
+# Local uploads and database exports
+uploads/
+storage/
+dump/
+*.zip
+
+# System files
+.DS_Store
+Thumbs.db

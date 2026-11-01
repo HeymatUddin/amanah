@@ -1,0 +1,455 @@
+.amanah-contact,
+.amanah-contact * {
+  box-sizing: border-box;
+}
+
+.amanah-contact {
+  display: grid;
+  gap: clamp(2rem, 4vw, 3rem);
+  min-width: 0;
+}
+
+/* Banner */
+
+.amanah-contact__hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: clamp(2.75rem, 6vw, 4.5rem)
+    clamp(1.5rem, 5vw, 4rem);
+  border: 1px solid #286650;
+  border-radius: 1.5rem;
+  background:
+    radial-gradient(
+      ellipse at 85% 15%,
+      rgb(218 190 113 / 12%),
+      transparent 55%
+    ),
+    linear-gradient(
+      120deg,
+      #043e30,
+      #07513e 60%,
+      #155b46
+    );
+  text-align: center;
+}
+
+.amanah-contact__hero::before {
+  position: absolute;
+  z-index: -1;
+  top: -9rem;
+  right: -7rem;
+  width: 26rem;
+  height: 26rem;
+  border: 1px solid rgb(230 205 143 / 12%);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 3rem rgb(230 205 143 / 4%),
+    0 0 0 6rem rgb(230 205 143 / 3%);
+  content: '';
+  pointer-events: none;
+}
+
+.amanah-contact__hero::after {
+  position: absolute;
+  right: 15%;
+  bottom: 0;
+  left: 15%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #c9a95c,
+    transparent
+  );
+  content: '';
+  pointer-events: none;
+}
+
+.amanah-contact__hero-content {
+  max-width: 48rem;
+  margin-inline: auto;
+}
+
+.amanah-contact__eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.875rem;
+  margin: 0;
+  color: #e8cc89;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  line-height: 1.8;
+  text-transform: uppercase;
+}
+
+.amanah-contact__eyebrow::before,
+.amanah-contact__eyebrow::after {
+  width: 2rem;
+  height: 1px;
+  background: rgb(232 204 137 / 45%);
+  content: '';
+}
+
+.amanah-contact__hero h1 {
+  margin: 1.25rem 0 0;
+  color: #ffffff;
+  font-size: clamp(2rem, 4.5vw, 3.5rem);
+  font-weight: 700;
+  letter-spacing: -0.045em;
+  line-height: 1.15;
+  text-wrap: balance;
+}
+
+.amanah-contact__hero h1 span {
+  display: block;
+  margin-top: 0.3rem;
+  color: #ecd49a;
+}
+
+.amanah-contact__divider {
+  width: 2.75rem;
+  height: 2px;
+  margin: 1.5rem auto;
+  border-radius: 999px;
+  background: #c9a95c;
+}
+
+.amanah-contact__hero-description {
+  max-width: 32rem;
+  margin: 0 auto;
+  color: #cee0d7;
+  font-size: 0.95rem;
+  line-height: 1.85;
+  text-wrap: balance;
+}
+
+/* Layout */
+
+.amanah-contact__layout {
+  display: grid;
+  align-items: start;
+  gap: 2rem;
+  min-width: 0;
+}
+
+.amanah-contact__sidebar {
+  display: grid;
+  gap: 1.25rem;
+  min-width: 0;
+}
+
+.amanah-contact__intro {
+  padding-block: 0.5rem;
+}
+
+.amanah-contact__label {
+  margin: 0;
+  color: #856423;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  line-height: 1.8;
+  text-transform: uppercase;
+}
+
+.amanah-contact__intro h2,
+.amanah-contact__form-heading h2 {
+  margin: 0.65rem 0 0;
+  color: #173d30;
+  font-size: clamp(1.65rem, 3vw, 2.1rem);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1.25;
+}
+
+.amanah-contact__intro > p:last-child,
+.amanah-contact__form-heading > p:last-child {
+  margin: 1rem 0 0;
+  color: #626970;
+  font-size: 0.9rem;
+  line-height: 1.85;
+}
+
+/* Information cards */
+
+.amanah-contact__card {
+  min-width: 0;
+  padding: 1.5rem;
+  border: 1px solid #e0e8e2;
+  border-radius: 1rem;
+  background: #ffffff;
+}
+
+.amanah-contact__icon {
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid #dcebe2;
+  border-radius: 0.875rem;
+  background: #eff8f2;
+  color: #08745b;
+}
+
+.amanah-contact__card h3 {
+  margin: 1rem 0 0;
+  color: #173d30;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.amanah-contact__card > p {
+  margin: 0.65rem 0 0;
+  color: #626970;
+  font-size: 0.875rem;
+  line-height: 1.8;
+}
+
+.amanah-contact__text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  max-width: 100%;
+  margin-top: 1rem;
+  color: #065f46;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.amanah-contact__text-link svg {
+  flex-shrink: 0;
+}
+
+.amanah-contact__text-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.amanah-contact__card .amanah-contact__unavailable {
+  margin-top: 1rem;
+  color: #856423;
+  font-size: 0.8rem;
+}
+
+/* Form */
+
+.amanah-contact__form-card {
+  min-width: 0;
+  padding: clamp(1.25rem, 4vw, 2.5rem);
+  border: 1px solid #dce5de;
+  border-radius: 1.25rem;
+  background: #ffffff;
+}
+
+.amanah-contact__form {
+  display: grid;
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.amanah-contact__form-row {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.amanah-contact__field {
+  display: grid;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+.amanah-contact__field label {
+  color: #173d30;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.amanah-contact__field input,
+.amanah-contact__field select,
+.amanah-contact__field textarea {
+  width: 100%;
+  min-width: 0;
+  padding: 0.875rem 1rem;
+  border: 1px solid #d8e2db;
+  border-radius: 0.625rem;
+  background: #fcfdfc;
+  color: #173d30;
+  font: inherit;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.amanah-contact__field input,
+.amanah-contact__field select {
+  min-height: 3rem;
+}
+
+.amanah-contact__field textarea {
+  min-height: 11rem;
+  resize: vertical;
+}
+
+.amanah-contact__field input::placeholder,
+.amanah-contact__field textarea::placeholder {
+  color: #7b8480;
+}
+
+.amanah-contact__field input:focus,
+.amanah-contact__field select:focus,
+.amanah-contact__field textarea:focus {
+  border-color: #08745b;
+  outline: 2px solid rgb(8 116 91 / 15%);
+  outline-offset: 1px;
+  background: #ffffff;
+}
+
+.amanah-contact__character-count {
+  color: #6c746f;
+  font-size: 0.75rem;
+  text-align: right;
+}
+
+.amanah-contact__privacy {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.625rem;
+  padding: 0.875rem;
+  border-radius: 0.625rem;
+  background: #eff6f1;
+}
+
+.amanah-contact__privacy svg {
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+  color: #08745b;
+}
+
+.amanah-contact__privacy p {
+  margin: 0;
+  color: #52665c;
+  font-size: 0.8rem;
+  line-height: 1.7;
+}
+
+.amanah-contact__submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  width: fit-content;
+  max-width: 100%;
+  min-height: 3rem;
+  padding: 0.875rem 1.5rem;
+  border: 1px solid #065f46;
+  border-radius: 0.625rem;
+  background: #065f46;
+  color: #ffffff;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.amanah-contact__submit:hover:not(:disabled) {
+  border-color: #064e3b;
+  background: #064e3b;
+}
+
+.amanah-contact__submit:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.amanah-contact__form-note {
+  margin: -0.5rem 0 0;
+  color: #626970;
+  font-size: 0.8rem;
+  line-height: 1.75;
+}
+
+/* Bottom section */
+
+.amanah-contact__bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding: clamp(1.5rem, 4vw, 2rem);
+  border: 1px solid #e4d8bd;
+  border-radius: 1rem;
+  background: #fffaf0;
+}
+
+.amanah-contact__bottom h2 {
+  margin: 0;
+  color: #173d30;
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.amanah-contact__bottom p {
+  margin: 0.5rem 0 0;
+  color: #626970;
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+.amanah-contact__bottom-link {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 0.625rem;
+  color: #065f46;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.5;
+  text-decoration: none;
+}
+
+.amanah-contact__bottom-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.amanah-contact a:focus-visible,
+.amanah-contact__submit:focus-visible {
+  outline: 3px solid #b28b40;
+  outline-offset: 4px;
+}
+
+/* Responsive */
+
+@media (min-width: 640px) {
+  .amanah-contact__form-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 900px) {
+  .amanah-contact__layout {
+    grid-template-columns:
+      minmax(0, 0.85fr)
+      minmax(0, 1.5fr);
+    gap: 2.5rem;
+  }
+
+  .amanah-contact__bottom {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .amanah-contact__submit {
+    width: 100%;
+  }
+}

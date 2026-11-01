@@ -1,0 +1,363 @@
+.dashboard-navbar,
+.dashboard-navbar * {
+  box-sizing: border-box;
+}
+
+.dashboard-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  border-bottom: 1px solid #dfe8e2;
+  background: #ffffff;
+  box-shadow: 0 3px 16px rgb(6 78 59 / 3%);
+}
+
+.dashboard-navbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  width: 100%;
+  min-height: 5rem;
+  padding: 0.875rem clamp(1rem, 3vw, 2rem);
+}
+
+.dashboard-navbar__brand {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 0.75rem;
+  color: #064e3b;
+  text-decoration: none;
+}
+
+.dashboard-navbar__logo {
+  display: block;
+  flex-shrink: 0;
+  width: 4rem;
+  height: 4rem;
+  object-fit: contain;
+}
+
+.dashboard-navbar__brand-copy {
+  display: grid;
+  gap: 0.1rem;
+}
+
+.dashboard-navbar__brand-name {
+  font-size: 1.5rem;
+  font-weight: 750;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+}
+
+.dashboard-navbar__brand-caption {
+  color: #68776e;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* Admin / member switch */
+
+.dashboard-navbar__switch {
+  display: flex;
+  gap: 0.25rem;
+  padding: 0.3rem;
+  border: 1px solid #e0e8e2;
+  border-radius: 0.875rem;
+  background: #f2f6f3;
+}
+
+.dashboard-navbar__switch button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 2.5rem;
+  padding: 0.6rem 0.875rem;
+  border: 1px solid transparent;
+  border-radius: 0.625rem;
+  background: transparent;
+  color: #52665c;
+  font: inherit;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 150ms ease,
+    color 150ms ease;
+}
+
+.dashboard-navbar__switch button:hover {
+  background: #e6eee8;
+}
+
+.dashboard-navbar__switch button[aria-pressed='true'] {
+  border-color: #065f46;
+  background: #065f46;
+  color: #ffffff;
+  box-shadow: 0 2px 6px rgb(6 95 70 / 12%);
+}
+
+/* Account */
+
+.dashboard-navbar__account {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  min-width: 0;
+}
+
+.dashboard-navbar__identity {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  min-width: 0;
+}
+
+.dashboard-navbar__avatar {
+  display: grid;
+  flex-shrink: 0;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid #dfd3b6;
+  border-radius: 50%;
+  background: #fff8e8;
+  color: #856423;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.dashboard-navbar__user-copy {
+  display: grid;
+  min-width: 0;
+  gap: 0.15rem;
+}
+
+.dashboard-navbar__name {
+  max-width: 12rem;
+  overflow: hidden;
+  color: #173d30;
+  font-size: 0.8rem;
+  font-weight: 650;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dashboard-navbar__role {
+  color: #6b7870;
+  font-size: 0.7rem;
+}
+
+.dashboard-navbar__logout {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 2.75rem;
+  padding: 0.6rem 0.875rem;
+  border: 1px solid #dce5df;
+  border-radius: 0.75rem;
+  background: #ffffff;
+  color: #52665c;
+  font: inherit;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.dashboard-navbar__logout:hover:not(:disabled) {
+  border-color: #efcccc;
+  background: #fff5f5;
+  color: #a33131;
+}
+
+.dashboard-navbar__logout:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.dashboard-navbar__error {
+  margin: 0;
+  padding: 0.75rem 1rem;
+  border-top: 1px solid #fecaca;
+  background: #fff1f2;
+  color: #9f1239;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.dashboard-navbar a:focus-visible,
+.dashboard-navbar button:focus-visible {
+  outline: 3px solid #b28b40;
+  outline-offset: 3px;
+}
+
+/* Dashboard base */
+
+.amanah-dashboard {
+  min-height: 100dvh;
+  background: #f6f8f6;
+  color: #173d30;
+}
+
+.amanah-dashboard__content {
+  max-width: 80rem;
+  margin-inline: auto;
+  padding: clamp(1.25rem, 3vw, 2rem);
+}
+
+.amanah-dashboard__content h1 {
+  margin: 0;
+  color: #173d30;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+}
+
+.amanah-dashboard__content > p {
+  margin-top: 0.75rem;
+  color: #626970;
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+@media (max-width: 1050px) {
+  .dashboard-navbar__user-copy {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .dashboard-navbar__inner {
+    flex-wrap: wrap;
+    gap: 0.875rem;
+  }
+
+  .dashboard-navbar__account {
+    gap: 0.625rem;
+    margin-left: auto;
+  }
+
+  .dashboard-navbar__switch {
+    order: 3;
+    width: 100%;
+  }
+
+  .dashboard-navbar__switch button {
+    flex: 1;
+  }
+
+  .dashboard-navbar__logout span {
+    display: none;
+  }
+
+  .dashboard-navbar__logout {
+    width: 2.75rem;
+    padding: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dashboard-navbar__switch button {
+    transition: none;
+  }
+}
+
+.dashboard-navbar__inner {
+  width: 100%;
+  max-width: 1280px;
+  margin-inline: auto;
+}
+.dashboard-navbar {
+  border-bottom-color: #286650;
+  background: linear-gradient(110deg, #064e3b, #07513e);
+  box-shadow: 0 3px 16px rgb(0 0 0 / 8%);
+}
+
+.dashboard-navbar__brand {
+  color: #ffffff;
+}
+
+.dashboard-navbar__logo {
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0.3rem;
+  border: 1px solid rgb(255 255 255 / 20%);
+  border-radius: 0.75rem;
+  background: #ffffff;
+  object-fit: contain;
+}
+
+.dashboard-navbar__brand-name {
+  color: #ffffff;
+}
+
+.dashboard-navbar__brand-caption {
+  color: #e8cc89;
+}
+
+/* View switch */
+
+.dashboard-navbar__switch {
+  border-color: rgb(255 255 255 / 18%);
+  background: rgb(0 0 0 / 12%);
+}
+
+.dashboard-navbar__switch button {
+  color: #d4e5dc;
+}
+
+.dashboard-navbar__switch button:hover {
+  background: rgb(255 255 255 / 9%);
+  color: #ffffff;
+}
+
+.dashboard-navbar__switch button[aria-pressed='true'] {
+  border-color: #ecd49a;
+  background: #ecd49a;
+  color: #173d30;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
+}
+
+/* Account */
+
+.dashboard-navbar__avatar {
+  border-color: rgb(232 204 137 / 40%);
+  background: rgb(232 204 137 / 12%);
+  color: #f1d99f;
+}
+
+.dashboard-navbar__name {
+  color: #ffffff;
+}
+
+.dashboard-navbar__role {
+  color: #c0d6ca;
+}
+
+.dashboard-navbar__logout {
+  border-color: rgb(255 255 255 / 25%);
+  background: rgb(255 255 255 / 5%);
+  color: #ffffff;
+}
+
+.dashboard-navbar__logout:hover:not(:disabled) {
+  border-color: #ecd49a;
+  background: rgb(232 204 137 / 12%);
+  color: #f1d99f;
+}
+.dashboard-navbar {
+  width: 100%;
+  max-width: 1280px;
+  margin-inline: auto;
+}
+
+.dashboard-navbar__inner {
+  width: 100%;
+  max-width: none;
+}

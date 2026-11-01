@@ -1,0 +1,102 @@
+.amanah-features {
+  padding-block: clamp(3.5rem, 7vw, 6rem);
+}
+
+.amanah-features__intro {
+  max-width: 40rem;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.amanah-features__eyebrow {
+  margin: 0;
+  color: #94712e;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  line-height: 1.6;
+  text-transform: uppercase;
+}
+
+.amanah-features__title {
+  margin: 0.875rem 0 0;
+  color: #173d30;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 750;
+  letter-spacing: -0.035em;
+  line-height: 1.2;
+}
+
+.amanah-features__subtitle {
+  margin: 1rem 0 0;
+  color: #626970;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.amanah-features__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.25rem;
+  margin-top: 2.5rem;
+}
+
+.amanah-feature {
+  min-width: 0;
+  padding: 1.5rem;
+  border: 1px solid #e2e8e3;
+  border-radius: 1rem;
+  background: #ffffff;
+}
+
+.amanah-feature__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.amanah-feature__icon {
+  display: grid;
+  place-items: center;
+  width: 3.25rem;
+  height: 3.25rem;
+  border: 1px solid #dcebe2;
+  border-radius: 0.875rem;
+  background: #eff8f2;
+  color: #08745b;
+}
+
+.amanah-feature__number {
+  color: #a18b5e;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.amanah-feature__title {
+  margin: 1.5rem 0 0;
+  color: #173d30;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.amanah-feature__description {
+  margin: 0.75rem 0 0;
+  color: #626970;
+  font-size: 0.9rem;
+  line-height: 1.85;
+}
+
+@media (min-width: 640px) {
+  .amanah-features__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .amanah-features__grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}

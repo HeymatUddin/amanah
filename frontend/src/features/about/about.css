@@ -1,0 +1,229 @@
+.amanah-about {
+  display: grid;
+  gap: clamp(3rem, 6vw, 5rem);
+}
+
+.amanah-about__hero {
+  padding: clamp(2rem, 6vw, 4.5rem) clamp(1.25rem, 4vw, 3rem);
+  border: 1px solid #185e49;
+  border-radius: 1.25rem;
+  background:
+    radial-gradient(
+      circle at top right,
+      rgb(227 199 121 / 10%),
+      transparent 55%
+    ),
+    #064e3b;
+  text-align: center;
+}
+
+.amanah-about__eyebrow {
+  margin: 0;
+  color: #94712e;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.17em;
+  line-height: 1.8;
+  text-transform: uppercase;
+}
+
+.amanah-about__hero .amanah-about__eyebrow {
+  color: #f4d477;
+  text-shadow: 0 0 10px rgb(244 212 119 / 20%);
+}
+
+.amanah-about__hero h1 {
+  max-width: 52rem;
+  margin: 1.25rem auto 0;
+  color: #ffffff;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.2;
+}
+
+.amanah-about__hero h1 span {
+  display: block;
+  margin-top: 0.5rem;
+  color: #f4d477;
+}
+
+.amanah-about__hero-description {
+  max-width: 43rem;
+  margin: 1.5rem auto 0;
+  color: #c7dfd5;
+  font-size: 1rem;
+  line-height: 1.9;
+}
+
+.amanah-about__story {
+  display: grid;
+  align-items: center;
+  gap: 2rem;
+}
+
+.amanah-about__story-copy,
+.amanah-about__purpose,
+.amanah-about__responsibility > div {
+  min-width: 0;
+}
+
+.amanah-about h2 {
+  margin: 0.75rem 0 0;
+  color: #173d30;
+  font-size: clamp(1.65rem, 3vw, 2.25rem);
+  font-weight: 750;
+  letter-spacing: -0.035em;
+  line-height: 1.25;
+}
+
+.amanah-about__story-copy > p:not(.amanah-about__eyebrow) {
+  margin: 1.25rem 0 0;
+  color: #626970;
+  font-size: 0.95rem;
+  line-height: 1.9;
+}
+
+.amanah-about__purpose {
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  border: 1px solid #e4d8bd;
+  border-radius: 1.25rem;
+  background: #fffefa;
+}
+
+.amanah-about__purpose-icon,
+.amanah-about__value-icon {
+  display: grid;
+  place-items: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border: 1px solid #dcebe2;
+  border-radius: 1rem;
+  background: #eff8f2;
+  color: #08745b;
+}
+
+.amanah-about__purpose h3 {
+  margin: 1.5rem 0 0;
+  color: #173d30;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.amanah-about__purpose p {
+  margin: 1rem 0 0;
+  color: #626970;
+  font-size: 0.95rem;
+  line-height: 1.9;
+}
+
+.amanah-about__purpose-divider {
+  height: 1px;
+  margin-block: 1.5rem;
+  background: #e4d8bd;
+}
+
+.amanah-about__purpose-caption {
+  color: #856423;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.amanah-about__section-heading {
+  text-align: center;
+}
+
+.amanah-about__values-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.amanah-about__value {
+  min-width: 0;
+  padding: 1.5rem;
+  border: 1px solid #e2e8e3;
+  border-radius: 1rem;
+  background: #ffffff;
+}
+
+.amanah-about__value h3 {
+  margin: 1.25rem 0 0;
+  color: #173d30;
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.amanah-about__value p {
+  margin: 0.75rem 0 0;
+  color: #626970;
+  font-size: 0.9rem;
+  line-height: 1.85;
+}
+
+.amanah-about__responsibility {
+  display: grid;
+  align-items: center;
+  gap: 1.75rem;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  border: 1px solid #dcebe2;
+  border-radius: 1.25rem;
+  background: #eff6f1;
+}
+
+.amanah-about__responsibility p:not(.amanah-about__eyebrow) {
+  max-width: 45rem;
+  margin: 1rem 0 0;
+  color: #626970;
+  font-size: 0.95rem;
+  line-height: 1.9;
+}
+
+.amanah-about__policy-link {
+  width: fit-content;
+  max-width: 100%;
+  height: auto;
+  min-height: 3rem;
+  padding: 0.875rem 1.25rem;
+  border: 1px solid #065f46;
+  border-radius: 0.5rem;
+  background: #065f46;
+  color: #ffffff;
+  line-height: 1.5;
+  white-space: normal;
+  box-shadow: none;
+}
+
+.amanah-about__policy-link:hover {
+  border-color: #064e3b;
+  background: #064e3b;
+}
+
+.amanah-about__policy-link:focus-visible {
+  outline: 3px solid #b28b40;
+  outline-offset: 4px;
+}
+
+@media (min-width: 640px) {
+  .amanah-about__values-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .amanah-about__story {
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+    gap: 3rem;
+  }
+
+  .amanah-about__values-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .amanah-about__responsibility {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 2rem;
+  }
+}

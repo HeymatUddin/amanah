@@ -1,0 +1,231 @@
+.amanah-faq {
+  position: relative;
+  margin-top: clamp(2rem, 4vw, 3rem);
+  padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 3vw, 2.5rem);
+  border: 1px solid #e4ebe5;
+  border-radius: 1.5rem;
+  background:
+    radial-gradient(
+      ellipse at top left,
+      #e3f3e9 0%,
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse at bottom right,
+      #f5ecd6 0%,
+      transparent 50%
+    ),
+    #fcfdfb;
+}
+
+.amanah-faq__intro {
+  max-width: 42rem;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.amanah-faq__eyebrow {
+  display: inline-block;
+  margin: 0;
+  padding: 0.5rem 1rem;
+  border: 1px solid #e5d7b7;
+  border-radius: 999px;
+  background: #fffdf6;
+  color: #856423;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  line-height: 1.7;
+  text-transform: uppercase;
+}
+
+.amanah-faq__title {
+  margin: 1.25rem 0 0;
+  color: #173d30;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 750;
+  letter-spacing: -0.035em;
+  line-height: 1.2;
+}
+
+.amanah-faq__title::after {
+  display: block;
+  width: 4rem;
+  height: 3px;
+  margin: 1.25rem auto 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #08745b, #d4a640);
+  content: '';
+}
+
+.amanah-faq__subtitle {
+  margin: 1rem 0 0;
+  color: #626970;
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.amanah-faq__list {
+  display: grid;
+  gap: 1rem;
+  max-width: 52rem;
+  margin: 2.5rem auto 0;
+}
+
+.amanah-faq__item {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #e0e8e2;
+  border-left: 3px solid transparent;
+  border-radius: 1rem;
+  background: #ffffff;
+  box-shadow: 0 4px 16px rgb(6 78 59 / 4%);
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    background-color 180ms ease;
+}
+
+@media (hover: hover) {
+  .amanah-faq__item:hover {
+    border-color: #b9d5c6;
+    box-shadow: 0 8px 24px rgb(6 78 59 / 8%);
+  }
+}
+
+.amanah-faq__item[open] {
+  border-color: #c9dcd0;
+  border-left-color: #c49a42;
+  background: #ffffff;
+  box-shadow: 0 8px 28px rgb(6 78 59 / 8%);
+}
+
+.amanah-faq__question {
+  display: flex;
+  align-items: center;
+  min-height: 4.5rem;
+  padding: 1.25rem 4rem 1.25rem 1.25rem;
+  color: #173d30;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.65;
+  cursor: pointer;
+}
+
+/* Style DaisyUI's existing plus/minus indicator */
+.amanah-faq__item > .amanah-faq__question::after {
+  top: 50%;
+  right: 1rem;
+  display: grid;
+  place-items: center;
+  width: 1.875rem;
+  height: 1.875rem;
+  border: 1px solid #dcebe2;
+  border-radius: 50%;
+  background: #eff8f2;
+  color: #08745b;
+  font-size: 1.1rem;
+  font-weight: 400;
+  transform: translateY(-50%);
+}
+
+.amanah-faq__item[open] > .amanah-faq__question::after {
+  border-color: #065f46;
+  background: #065f46;
+  color: #f4d477;
+}
+
+.amanah-faq__question:focus-visible {
+  outline: 2px solid #08745b;
+  outline-offset: -5px;
+  border-radius: 1rem;
+}
+
+.amanah-faq__answer {
+  padding-inline: 1.25rem;
+  color: #626970;
+  font-size: 0.9rem;
+  line-height: 1.9;
+}
+
+.amanah-faq__answer p {
+  margin: 0;
+  padding-top: 0.875rem;
+  border-top: 1px solid #edf1ed;
+}
+
+.amanah-faq__contact {
+  width: fit-content;
+  max-width: 100%;
+  margin: 2rem auto 0;
+  padding: 0.875rem 1.25rem;
+  border: 1px solid #e0e8e2;
+  border-radius: 0.875rem;
+  background: #ffffffb3;
+  color: #626970;
+  font-size: 0.85rem;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.amanah-faq__contact a {
+  color: #065f46;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.amanah-faq__contact a:focus-visible {
+  outline: 2px solid #08745b;
+  outline-offset: 4px;
+}
+
+@media (min-width: 640px) {
+  .amanah-faq__question {
+    padding-left: 1.75rem;
+  }
+
+  .amanah-faq__answer {
+    padding-inline: 1.75rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .amanah-faq__item {
+    transition: none;
+  }
+}
+
+.amanah-faq {
+  border-color: #185e49;
+  background: #064e3b;
+}
+
+.amanah-faq__title {
+  color: #ffffff;
+}
+
+.amanah-faq__subtitle {
+  color: #c7dfd5;
+}
+
+.amanah-faq__eyebrow {
+  border-color: #e3c77945;
+  background: #ffffff08;
+  color: #f4d477;
+  text-shadow: 0 0 10px rgb(244 212 119 / 25%);
+}
+
+.amanah-faq__contact {
+  border-color: #ffffff26;
+  background: #ffffff08;
+  color: #c7dfd5;
+}
+
+.amanah-faq__contact a {
+  color: #f4d477;
+}
+
+.amanah-faq__contact a:focus-visible {
+  outline-color: #f4d477;
+}
